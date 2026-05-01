@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharos_Onchain • Dashboard</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --card: #111111;
+      --accent: #00ff9d;
+      --text: #e0e0e0;
+      --muted: #888;
+    }
+    body { margin:0; padding:0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    header {
+      background: #000; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #222;
+    }
+    .logo { font-weight: bold; font-size: 1.4rem; color: var(--accent); }
+    main { padding: 20px; max-width: 1100px; margin: 0 auto; }
+    .card {
+      background: var(--card); border-radius: 12px; padding: 20px; margin-bottom: 20px; border: 1px solid #222;
+    }
+    h2 { color: var(--accent); margin: 0 0 15px 0; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid #222; }
+    th { color: var(--muted); }
+    .highlight { color: var(--accent); }
+    .copy-btn {
+      background: #222; color: var(--accent); border: none; padding: 8px 14px; border-radius: 6px; cursor: pointer;
+    }
+    .copy-btn:hover { background: var(--accent); color: black; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Pharos_Onchain</div>
+  <div style="font-size:0.9rem;">
+    0xb3D32c25ded2d5CE2a6a58b7D00FAF56EF0D130c
+    <button class="copy-btn" onclick="navigator.clipboard.writeText('0xb3D32c25ded2d5CE2a6a58b7D00FAF56EF0D130c');alert('Wallet address copied!')">Copy</button>
+  </div>
+</header>
+
+<main>
+  <div class="card">
+    <h2>Latest Blocks</h2>
+    <p><strong>RPC Latency Tester</strong> — Ping both endpoints, see which is faster right now</p>
+    <p><strong>Block Range Inspector</strong> — Aggregate tx volume, avg gas & block time delta</p>
+  </div>
+
+  <div class="card">
+    <h2>Full Pharos Ecosystem Briefing</h2>
+    <ul>
+      <li>Architecture breakdown — L1-Core, L1-Base, SPNs, Dual VM</li>
+      <li>$PROS token profile — supply, inflation schedule, APY</li>
+      <li>CCTP Domain Registry — all 12 Circle domains, Pharos at domain 31</li>
+      <li>$52M funding breakdown — seed & Series A, all backers named</li>
+      <li>Builder opportunity map — x402, RWA, cross-chain settlement, TradFi bridge</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>RPC Endpoints Used</h2>
+    <table>
+      <tr><th>Network</th><th>Endpoint</th></tr>
+      <tr><td>Mainnet</td><td class="highlight">https://rpc.pharos.xyz</td></tr>
+      <tr><td>Testnet</td><td class="highlight">https://atlantic.dplabs-internal.com</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Chain Stats</h2>
+    <table>
+      <tr><th>Metric</th><th>Value</th></tr>
+      <tr><td>Target TPS</td><td><strong>50,000</strong></td></tr>
+      <tr><td>Unique Testnet Addresses</td><td>1.31M+</td></tr>
+      <tr><td>Total Funding</td><td>$52M</td></tr>
+    </table>
+  </div>
+
+  <div style="text-align:center; margin-top:40px; color:#555;">
+    Built for the Pharos Ecosystem • April 2026 • by xtraisob
+  </div>
+</main>
+</body>
+</html>
